@@ -10,10 +10,10 @@ export default async function UsersPage() {
   const users: Promise<User[]> = getAllUsers()
   return (
     <section>
-      <h1 className='text-2xl font-bold'>Users</h1>
-      <h2>
+      <h1>Users</h1>
+      <h4>
         <Link href="/">Back to home</Link>
-      </h2>
+      </h4>
       <br />
       <ul>
         {(await users).map(user => {

@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   title: "Users"
 }
 
-export default async function Users() {
+export default async function UsersPage() {
   const users: Promise<User[]> = getAllUsers()
   return (
     <section>

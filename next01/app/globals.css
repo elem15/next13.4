@@ -25,6 +25,7 @@ body {
     )
     rgb(var(--background-start-rgb));
     padding: 1rem;
+  overflow: scroll;
 }
 h1,
 h2,

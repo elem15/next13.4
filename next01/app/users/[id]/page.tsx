@@ -25,6 +25,7 @@ export async function generateMetadata({
     description: `This is the page of ${user.name}`
   };
 }
+
 export default async function User({ params }: Props) {
   const userData: Promise<User> = getUser(params.id)
   const postsData: Promise<Post[]> = getUserPosts(params.id)

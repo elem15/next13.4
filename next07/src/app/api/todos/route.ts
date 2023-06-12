@@ -52,7 +52,7 @@ export async function POST(request: Request) {
 export async function PUT(request: Request) {
   const body = await request.text();
   let { userId, title, id, completed } = JSON.parse(body);
-  if (!userId || !title || !id)
+  if (!userId || !title || !id || typeof completed !== "boolean")
     return NextResponse.json({ message: "UserId and Title are required" });
   const address = `${DATE_SOURCE_URL}/${id}`;
   const res = await fetch(address, {
